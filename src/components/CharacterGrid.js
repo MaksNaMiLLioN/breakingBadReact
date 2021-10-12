@@ -1,11 +1,11 @@
 import React from 'react'
 import CharactersItems from './CharactersItems'
-import spinner from '../img/spinner.gif'
+import Spinner from './Spinner'
 
 const CharacterGrid = ( { characters, isLoading } ) => {
     return (
         isLoading 
-        ? <img src = { spinner } style = {{ width: '200px', margin: 'auto', display: 'flex' }}/>
+        ? <Spinner/>
         : <section className="cards">
            { characters.map((character)=> (
            <CharactersItems character = {character} ></CharactersItems>))
