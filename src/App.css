@@ -35,6 +35,8 @@
   
   header {
     height: 200px;
+    align-items: center;
+    justify-content: center;
   }
   
   header img {
