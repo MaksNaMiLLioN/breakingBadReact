@@ -1,21 +1,29 @@
 import React, {useState} from 'react'
 
-const SearchForm = ({getQuery}) => {
+const SearchForm = ( { getQuery }) => {
 
-    const [query, setQuery] = useState('')
+    //const [q, setQuery] = useState('')
 
-    const onChange = (q) => {
-        setQuery(q)
-        getQuery(q)
+    const onQuery = (e) => {
+        getQuery(e)
+
     }
-    
+
 
     return (
-        <input placeholder = "Search..." alt ="Search" type="text"
-            className="form-control"
-            onChange = {(e) => onChange(e.target.value)}
-            autoFocus
+        <form className="center">
+        <input className="form-control"
+            type = "text"
+            style= {{ width: '500px', 
+            margin:'20px', 
+            display: "flex",
+            alignItems:"center",
+            justifyContent: "center"
+            }}
+            onChange = {(e) => onQuery(e.target.value)}
+            placeholder = "Search actor..."
         />
+        </form>
     )
 }
 

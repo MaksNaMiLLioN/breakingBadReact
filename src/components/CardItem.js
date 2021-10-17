@@ -1,32 +1,34 @@
 import React from 'react'
 
-const CharactersItems = ( { character } ) => {
+const CardItem = ( {actor} ) => {
     return (
+       
         <div className='card'>
         <div className='card-inner'>
           <div className='card-front'>
-            <img src={character.img} alt='' />
+            <img src={actor.img} alt='' />
           </div>
           <div className='card-back'>
-            <h1>{character.name}</h1>
+            <h1>{actor.name}</h1>
             <ul>
               <li>
-                <strong>Actor Name:</strong> {character.portrayed}
+                <strong>Actor Name:</strong> {actor.portrayed}
               </li>
               <li>
-                <strong>Nickname:</strong> {character.nickname}
+                <strong>Nickname:</strong> {actor.nickname}
               </li>
               <li>
-                <strong>Birthday:</strong> {character.birthday}
+                <strong>Birthday:</strong> {actor.birthday}
               </li>
               <li>
-                <strong>Status:</strong> {character.status}
+                <strong>Status:</strong> {actor.status}
               </li>
             </ul>
           </div>
         </div>
       </div>
+       
     )
 }
 
-export default CharactersItems
+export default CardItem
